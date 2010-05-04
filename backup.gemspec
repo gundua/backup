@@ -4,12 +4,12 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{backup}
-  s.version = "2.3.1"
+  s.name = %q{backup-gundua}
+  s.version = "2.3.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Michael van Rooijen"]
-  s.date = %q{2010-01-08}
+  s.date = %q{2010-05-04}
   s.default_executable = %q{backup}
   s.description = %q{
                             Backup is a Ruby Gem written for Unix and Rails environments. It can be used both with and without the
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
                             have access to, using either SCP, SFTP or regular FTP. Backup handles Compression, Archiving, Encryption
                             and Backup Cleaning (Cycling).
                         }
-  s.email = %q{meskyan@gmail.com}
+  s.email = %q{hendrik.louw@gundua.co.za}
   s.executables = ["backup"]
   s.extra_rdoc_files = [
     "LICENSE",

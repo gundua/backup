@@ -44,18 +44,18 @@ module Backup
             
       # Retrieves SMTP configuration
       def self.smtp_configuration
-        { :to       => self.to,
+        options = {
+          :to     => self.to,
           :from     => self.from,
           :via      => :smtp,
           :smtp     => {
           :host     => self.host,
           :port     => self.port,
-          :user     => self.username,
-          :password => self.password,
-          :auth     => self.authentication,
           :domain   => self.domain,
           :tls      => self.tls
         }}
+        options[:smtp].merge(:auth => self.authentication, :user => self.username, :password => self.password) if self.responds_to? :authentication
+
       end
       
       def self.parse_body
